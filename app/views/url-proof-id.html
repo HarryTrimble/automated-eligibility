@@ -1,0 +1,31 @@
+{% extends "layouts/url-proof-id.html" %}
+
+{% block pageTitle %}
+  GOV.UK Proof
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-l"><span class="govuk-!-font-weight-regular">Proof ID number: </span> HDJ2123F82</h1>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title ">
+          <div class="govuk-!-font-weight-regular" style="width: 150px; height: 150px; border: solid 2px black; text-align: center;">
+            Insert QR code
+          </div>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action govuk-!-font-weight-regular">Expires 11 June 2025
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="govuk-inset-text">
+      Only public sector organisations can view personal information using this code. 
+    </div>  
+  </div>
+</div>
+
+{% endblock %}

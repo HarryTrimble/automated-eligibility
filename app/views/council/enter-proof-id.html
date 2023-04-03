@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check proof - GOV.UK Proof
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">Arnsford District Council</span>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="/council/home-page">Dashboard</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Generate proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Templates</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-!-font-weight-bold" href="#">Check proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Settings</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">API integration</a>
+      </li>
+    </ul>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Check a proof now</span>
+    <h1 class="govuk-heading-l">What is the proof ID number?</h1>
+    <p class="govuk-body">The ID number by the QR code on a proof, either on a screen or printed.</p>
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Scan proof QR code
+    </button>
+    <form action="/council/proof-check-confirmation" method="post" novalidate>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="full-name">
+          Proof ID number
+        </label>
+        <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          Confirm proof ID number
+        </label>
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Sign in - GOV.UK Proof
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Check your phone
+      </h1>
+
+      <p>We've sent your a text message with a security code.</p>
+
+      <form class="form" action="/uni/home-page" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+            Text message code
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

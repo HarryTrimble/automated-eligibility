@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Home - GOV.UK Proof
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">University of Arnsford</span>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link govuk-!-font-weight-bold" href="#">Dashboard</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/select-template">Generate proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Templates</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Check proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Settings</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">API integration</a>
+      </li>
+    </ul>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #1d70b8;">
+      <p style="margin-bottom: 0px; color: white;">
+        <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">366</span><br>
+        <a href="#" class="govuk-link" style="color: white;">Active proofs</a></p>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #505a5f;">
+      <p style="margin-bottom: 0px; color: white;">
+        <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">2401</span><br>
+        <a href="#" class="govuk-link" style="color: white;">Expired proofs</a></p>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px;">
+      <p style="margin-bottom: 0px; color: white;">
+        <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">829</span><br>
+        <a href="#" class="govuk-link" style="color: white;">Proofs checked</a></p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
