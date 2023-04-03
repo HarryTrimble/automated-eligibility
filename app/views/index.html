@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/url-proof-id.html" %}
 
 {% set pageName="Home" %}
 
@@ -7,19 +7,71 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">
-      Prototypes
+    <h1 class="govuk-heading-l">
+      Tech spike: GOV.UK Proof concept
     </h1>
 
-    <ul class="govuk-list">
+    <p class="govuk-body">Two teams on GDS' Government Data Exchange programme spent a week exploring one way eligibility checking between public services could work.</p>
+
+    <p class="govuk-body">The prototypes are of a fiction government platform called <a class="govuk-link" href="/product-splash-page">GOV.UK Proof</a>. It uses the scenario of a university giving a student proof they are entitled to a council tax exemption from a local authority. </p>
+
+    <h2 class="govuk-heading-m">Generate proof</h2>
+
+    <ul class="govuk-list govuk-list--number">
       <li>
-        <a class="govuk-link" href="/product-splash-page">Generate a proof someone is a full-time student as a unviersity</a>
+        <a class="govuk-link" href="/product-splash-page">Start page</a>
       </li>
       <li>
-        <a class="govuk-link" href="/url-proof-id">Digital proof about student</a>
+        <a class="govuk-link" href="/uni/sign-in">Sign in</a>
       </li>
       <li>
-        <a class="govuk-link" href="/council/sign-in">Checking a proof someone is a full-time studen as a local authority</a>
+        <a class="govuk-link" href="/uni/text-code">Two factor authentification</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/home-page">Dashboard home page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/select-template">Select proof template</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/method-volume">Pick upload type</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/fill-in-proof-details">Enter details form</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/check-answers">Check answers</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/proof-confirmation">Generate and share proof</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Digital proof</h2>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/url-proof-id">Digital proof of full-time education</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Check proof</h2>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/council/sign-in">Sign in</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/council/text-code">Two factor authentification</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/council/home-page">Dashboard home page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/council/enter-proof-id">Enter proof ID number</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/council/proof-check-confirmation">Valid proof</a>
       </li>
     </ul>
 
