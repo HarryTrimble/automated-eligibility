@@ -1,6 +1,43 @@
 //
 // For guidance on how to add CSS and SCSS see:
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
-// 
+//
 
 // Add extra styles here
+
+
+#sidebar {
+  @extend .govuk-grid-column-one-quarter
+}
+
+#proof-container {
+  @extend .govuk-grid-column-three-quarters
+}
+
+@media print {
+  #navigation {
+    display: none;
+  }
+  #sidebar {
+    display: none;
+  }
+  #after-proof {
+    display: none;
+  }
+  #proof-container {
+    width: 100% !important;
+  }
+  #certificate-link {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  .govuk-summary-list__row{
+    border-bottom: none;
+    line-height: 1;
+  }
+}
