@@ -114,7 +114,7 @@
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title ">
           <div class="govuk-!-font-weight-regular" style="width: 150px; height: 150px; border: solid 2px black; text-align: center;">
-            <img src="/public/images/qr-code.png" style="width: 150px; height: 150px">
+            <canvas id="qr-code-canvas" style="width: 150px; height: 150px"></canvas>
           </div>
           HDJ2123F82
         </h2>
@@ -124,6 +124,29 @@
         </ul>
       </div>
     </div>
+  </div>
 </div>
 
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/qrcode.js"></script>
+<script>
+  const data =
+          `Proof ID Number\: HDJ2123F82
+Organisation\: University of Arnsford
+Full name\: Henrik Colleymore
+Email address\: hcolleymore@gmail.com
+Course name\: Politics and History BA
+Start date\: 3 10 2022
+End date\: 11 6 2025
+Address\: 72 Guild Street, Arnsford, AR23 6FH`
+  QRCode.toCanvas(
+          document.getElementById('qr-code-canvas'),
+          data, { width: 150 },
+          function (error) {
+            if (error) console.error(error)
+            console.log('success!');
+          })
+</script>
 {% endblock %}
