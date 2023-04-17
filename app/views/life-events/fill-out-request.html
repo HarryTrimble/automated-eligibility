@@ -1,0 +1,166 @@
+{% extends "layouts/main.html" %}
+
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-xl">Request notifications about children who start receiving disability living
+        allowance</h1>
+    {{ govukNotificationBanner({
+        text: "It currently takes DWP 5 months to approve requests for this data"
+    }) }}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+
+            <form action="check-answers" method="get">
+                <div class="govuk-form-group">
+
+                    <h2 class="govuk-heading-l">Your details</h2>
+                    {{ govukInput({
+                        label: {
+                            text: "Full name",
+                            classes: "govuk-label--s",
+                            isPageHeading: false
+                        }
+                    }) }}
+                    {{ govukInput({
+                        label: {
+                            text: "Email",
+                            classes: "govuk-label--s",
+                            isPageHeading: false
+                        },
+                        hint: {
+                            text: "This must be a gov.uk or nhs.uk email, such as first.last@example-council.gov.uk"
+                        }
+                    }) }}
+                </div>
+
+
+                <div class="govuk-form-group">
+
+                    <h2 class="govuk-heading-l">Your organisation's details</h2>
+                    {{ govukInput({
+                        label: {
+                            text: "Name",
+                            classes: "govuk-label--s",
+                            isPageHeading: false
+                        }
+                    }) }}
+                    {{ govukRadios({
+                        name: "where-do-you-live",
+                        fieldset: {
+                            legend: {
+                                text: "Organisation type",
+                                isPageHeading: true,
+                                classes: "govuk-fieldset__legend--s"
+                            }
+                        },
+                        items: [
+                            {
+                                value: "england",
+                                text: "Local authority"
+                            },
+                            {
+                                value: "scotland",
+                                text: "NHS trust"
+                            }
+                        ]
+                    }) }}
+                </div>
+
+                {{ govukCheckboxes({
+                    name: "fields",
+                    fieldset: {
+                        legend: {
+                            text: "Which data do you need?",
+                            isPageHeading: true,
+                            classes: "govuk-fieldset__legend--l"
+                        }
+                    },
+                    hint: {
+                        text: "Select all that apply."
+                    },
+                    items: [
+                        {
+                            value: "a",
+                            text: "Child's name"
+                        },
+                        {
+                            value: "b",
+                            text: "Child's date of birth"
+                        },
+                        {
+                            value: "c",
+                            text: "Child's school"
+                        },
+                        {
+                            value: "d",
+                            text: "Child's address"
+                        },
+                        {
+                            value: "e",
+                            text: "Child's sex"
+                        },
+                        {
+                            value: "c",
+                            text: "Does the child have an Educational Health Care Plan (EHCP)?"
+                        },
+                        {
+                            value: "c",
+                            text: "Child's mobility needs"
+                        },
+                        {
+                            value: "c",
+                            text: "Parent/Guardian's name"
+                        },
+                        {
+                            value: "c",
+                            text: "Parent/Guardian's address"
+                        },
+                        {
+                            value: "c",
+                            text: "Parent/Guardian's phone number"
+                        },
+                        {
+                            value: "c",
+                            text: "Parent/Guardian's relationship to child"
+                        }
+                    ]
+                }) }}
+
+                {{ govukCheckboxes({
+                    name: "fields",
+                    fieldset: {
+                        legend: {
+                            text: "Why do you need this data?",
+                            isPageHeading: true,
+                            classes: "govuk-fieldset__legend--l"
+                        }
+                    },
+                    hint: {
+                        text: "Select all that apply."
+                    },
+                    items: [
+                        {
+                            value: "a",
+                            text: "To offer free school transport"
+                        },
+                        {
+                            value: "b",
+                            text: "To offer respite care"
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    text: "Continue"
+                }) }}
+            </form>
+        </div>
+    </div>
+{% endblock %}
