@@ -6,7 +6,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
 {% block header %}
-	<header class="govuk-header " role="banner" data-module="govuk-header" style="border: 0px solid black;">
+	<header class="govuk-header " role="banner" data-module="govuk-header">
 	  <div class="govuk-header__container govuk-width-container">
 	    <div class="govuk-header__logo">
 	      <a href="/product-splash-page" class="govuk-header__link govuk-header__link--homepage">
@@ -69,40 +69,4 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 	    </div>
 	  </div>
 	</header>
-{% endblock %}
-
-{% block main %}
-	
-	<div class="gdx-hero" style="background-color: #1d70b8;">
-		<div class="govuk-width-container">
-			{% block banner %}
-			{% endblock %}
-		</div>
-	</div>
-
-	<div class="govuk-width-container">
-	  <main class="govuk-main-wrapper">
-		{% block content %}
-		<div class="govuk-grid-row">
-	      <div class="govuk-grid-column-one-half">
-	        <span class="govuk-caption-m">Department for Work and Pensions</span>
-			<h1 class="govuk-heading-l">Child has a disability</h1>
-	        <p class="govuk-body">Get a notification to your public service when a user successfully appllies for child Disability Living Allowance.</p>
-	        <div class="govuk-button-group">
-			  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-			    Request notifcation
-			  </button>
-			  <span class="govuk-body" style="padding-right: 5px;">or</span>
-			  <a class="govuk-link" href="/life-events/notification-details">learn more</a>
-			</div>
-	      </div>
-	      <div class="govuk-grid-column-one-half">
-	        <div style="border: solid 1px #b1b4b6; width: 100%; padding-top: 50%;"></div>
-	      </div>
-	    </div>
-	    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-		{% endblock %}
-	  </main>
-	</div>
-
 {% endblock %}
