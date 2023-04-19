@@ -1,0 +1,109 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Generate proof - GOV.UK Proof
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">University of Arnsford</span>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div id="sidebar">
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="/home-page">Dashboard</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-!-font-weight-bold" href="#">Generate proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Templates</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Check proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Settings</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">API integration</a>
+      </li>
+    </ul>
+  </div>
+  <div id="proof-container">
+    <span class="govuk-caption-l">Generate proof</span>
+    <h1 class="govuk-heading-l">Check before sending</h1>
+    <div class="govuk-panel govuk-panel--confirmation" style="color: #0b0c0c; background: white; border: 2px solid #0b0c0c;">
+      <h1 class="govuk-panel__title">
+        4812 proofs ready to send
+      </h1>
+      <div class="govuk-panel__body">
+        <a href="#">View spreadsheet</a>: freshers.csv
+      </div>
+    </div>
+    <p class="govuk-body-l"><a href="#">Preview proof people will recieve</a></p>
+    <br>
+    <div id="after-proof">
+        <form action="/uni/sent-confirmation" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  How do you want to send proof to people?
+                </h1>
+              </legend>
+              <div id="waste-hint" class="govuk-hint">
+                Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                    Post
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                    Email
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Send proof
+          </button>
+        </form>
+      </div>
+    </div>
+</div>
+
+{% block pageScripts %}
+<script src="/public/javascripts/qrcode.js"></script>
+<script>
+  const data =
+          `Proof ID Number\: HDJ2123F82
+Organisation\: University of Arnsford
+Full name\: Henrik Colleymore
+Email address\: hcolleymore@gmail.com
+Course name\: Politics and History BA
+Start date\: 3 10 2022
+End date\: 11 6 2025
+Address\: 72 Guild Street, Arnsford, AR23 6FH`
+  QRCode.toCanvas(
+          document.getElementById('qr-code-canvas'),
+          data, { width: 150 },
+          function (error) {
+            if (error) console.error(error)
+            console.log('success!');
+          })
+</script>
+{% endblock %}
+
+{% endblock %}

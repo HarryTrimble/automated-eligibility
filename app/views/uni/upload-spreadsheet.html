@@ -1,0 +1,83 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Generate proof - GOV.UK Proof
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">University of Arnsford</span>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="/home-page">Dashboard</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-!-font-weight-bold" href="#">Generate proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Templates</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Check proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Settings</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">API integration</a>
+      </li>
+    </ul>
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+    <span class="govuk-caption-l">Generate proof</span>
+    <h1 class="govuk-heading-l">Upload proof details</h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload a file
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+
+    <form action="/uni/check-before-sending" method="post" novalidate>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+    <h2 class="govuk-heading-m">You file needs to look like this example</h2>
+
+    <p class="govuk-body">Certificate of registration <a href="#">change template</a></p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Full name</th>
+          <th scope="col" class="govuk-table__header">Email address</th>
+          <th scope="col" class="govuk-table__header">Course name</th>
+          <th scope="col" class="govuk-table__header">7 more colums</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Henrik Colleymore</th>
+          <td class="govuk-table__cell">hcolleymore@gmail.com</td>
+          <td class="govuk-table__cell">Politics and History BA</td>
+          <td class="govuk-table__cell"><a href="#">View all</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="govuk-body"><a href="#">Download template</a></p>
+
+  </div>
+</div>
+
+{% endblock %}

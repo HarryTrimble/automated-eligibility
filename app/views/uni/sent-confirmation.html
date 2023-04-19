@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Generate proof - GOV.UK Proof
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">University of Arnsford</span>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div id="sidebar">
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="/home-page">Dashboard</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-!-font-weight-bold" href="#">Generate proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Templates</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Check proof</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Settings</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">API integration</a>
+      </li>
+    </ul>
+  </div>
+  <div id="proof-container">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        4812 proofs sent
+      </h1>
+      <div class="govuk-panel__body">
+        Your reference number<br><strong>HDJ2123F</strong>
+      </div>
+    </div>
+    <div id="after-proof">
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/public/proof.pdf" download="hdj2123f82.pdf">
+          Download proof documents
+        </a>
+        <button class="govuk-button govuk-button--warning govuk-!-margin-left-4" data-module="govuk-button" onclick="print()">
+          Revoke all proof just sent
+        </button>
+      </div>
+    </div>
+</div>
+
+{% block pageScripts %}
+<script src="/public/javascripts/qrcode.js"></script>
+<script>
+  const data =
+          `Proof ID Number\: HDJ2123F82
+Organisation\: University of Arnsford
+Full name\: Henrik Colleymore
+Email address\: hcolleymore@gmail.com
+Course name\: Politics and History BA
+Start date\: 3 10 2022
+End date\: 11 6 2025
+Address\: 72 Guild Street, Arnsford, AR23 6FH`
+  QRCode.toCanvas(
+          document.getElementById('qr-code-canvas'),
+          data, { width: 150 },
+          function (error) {
+            if (error) console.error(error)
+            console.log('success!');
+          })
+</script>
+{% endblock %}
+
+{% endblock %}
