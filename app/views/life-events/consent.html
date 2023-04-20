@@ -1,0 +1,50 @@
+{% extends "layouts/url-proof-id.html" %}
+
+{% block pageTitle %}
+  GOV.UK Proof
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-l">Sharing information with other public services</h1>
+    <p class="">Based on what you said in your application for child Disability Living Allowance, you probably also qualify for services from Arnsford District Council:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Free bus and rail passes</li>
+      <li>Subsidised travel</li>
+      <li>Blue Badge</li>
+      <li>Sensory support service</li>
+      <li>The Max Card</li>
+      <li>Further information and advice service</li>
+    </ul>
+
+    <h3 class="govuk-heading-m">Do you want us to pass your details to Arnsford District Council?</h3>
+
+    <p class="govuk-body">To save you time, we can pass on the information you provided in your [child DLA] application to help you apply for council services. <a href="#">Find out more about how we use your personal information</a>.</p>
+
+    <form action="/life-events/confirm-consent" method="post" novalidate>
+
+        {{ govukRadios({
+          name: "where-do-you-live",
+          items: [
+            {
+              value: "england",
+              text: "Yes, pass on the information I’ve already provided in my [child DLA] application "
+            },
+            {
+              value: "scotland",
+              text: "No, do not pass on my details - but send me a link to those services anyway"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+
+  </div>
+</div>
+
+{% endblock %}
