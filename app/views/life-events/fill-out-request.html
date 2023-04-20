@@ -7,15 +7,16 @@
 
 {% block content %}
 
-    <h1 class="govuk-heading-xl">Request notifications about children who start receiving disability living
-        allowance</h1>
-    {{ govukNotificationBanner({
-        text: "It currently takes DWP 5 months to approve requests for this data"
-    }) }}
-
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
+            <h1 class="govuk-heading-xl">
+                Request notifications about children who start receiving Disability Living Allowance
+            </h1>
+            
+            {{ govukNotificationBanner({
+                text: "It currently takes five months to create data sharing agreements with Department for Work and Pension and approve requests for this data"
+            }) }}
 
             <form action="/life-events/check-answers" method="get">
                 <div class="govuk-form-group">
