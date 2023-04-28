@@ -1,0 +1,132 @@
+{% extends "layouts/plain.html" %}
+
+{% block pageTitle %}
+  Automated Eligibility
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Questions and thoughts raised by making the prototypes
+    </h1>
+
+    <p class="govuk-body">We believe a good early prototype should raise more questions than it answers. Meaning for us a early prototype is a question machine.</p>
+
+    <p class="govuk-body">Questions and thoughts raised by making the prototypes:</p>
+
+    <h2 class="govuk-heading-m">GOV.UK Proof</h2>
+
+    <h3 class="govuk-heading-s">Value proposition</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Do you need two separate propositions for orgs with data and ones who need it to provide services?</li>
+      <li>Are the main points of proof already covered - or is there a long tail?</li>
+      <li>Could secure file transfer be its own product? Could we show the HMRC team who’s <a href="https://www.gov.uk/guidance/hmrc-secure-data-exchange-service-sdes">built one</a>?</li>
+      <li>How do we allow the level of data shown [in a proof] to be configured based on service needs / data protection?</li>
+      <li>What are the level of needs for each of these [sending proof by email and post]?</li>
+      <li>If services want to send proof via post, how much benefit does this service offer?</li>
+      <li>Is there a need for services to check proofs in bulk?</li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Sign up and onboarding</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Do we need to have any more thoughts about onboarding like we did with life events? Carly Gilson</li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Sign up and onboarding</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Do we need to have any more thoughts about onboarding like we did with life events? Carly Gilson</li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Security and privacy</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>How long should data be retained?</li>
+      <li>Data retention, how long and can we delete early if consumed?</li>
+      <li>Do we want to allow proofs to be revoked?</li>
+      <li>How much data needs to be shown <a href="#">here</a>? And is it quite specific to each service?</li>
+      <li>Do we need security around <a href="#">this web address</a>?</li>
+      <li>Should checker have to provide more info about the person as well as proof ID to access the proof?</li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Security and privacy</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>How long should data be retained?</li>
+      <li>Data retention, how long and can we delete early if consumed?</li>
+      <li>Do we want to allow proofs to be revoked?</li>
+      <li>How much data needs to be shown <a href="#">here</a>? And is it quite specific to each service?</li>
+      <li>Do we need security around <a href="#">this web address</a>?</li>
+      <li>Should checker have to provide more info about the person as well as proof ID to access the proof?</li>
+    </ul>
+
+Proof as QR codes
+
+Is there a privacy risk of having too much information in QR code? Darwin Peltan
+What are the scenarios where a QR would be used? Darwin Peltan
+What should be in the QR code? Oskar Williams
+How much can we cram in a QR code? Ethan Mills
+How secure should the QR code be, what level of trust? Oskar Williams
+What's an appropriate signature scheme? Ethan Mills
+
+Authentication
+
+How much data should be viewable in a proof without authentication? Harry Trimble
+Who [user, data holder, services checking] should authentication sit with? Harry Trimble
+What level of auth will we need [as a service checking a proof? Oskar Williams
+Who should be allowed to check proofs? Harry Trimble
+
+Other user journeys
+
+What would adding a proof to somewhere else look like? Harry Trimble
+How would the user provide their proof in an online application journey? Darwin Peltan
+
+Technical constraints
+What are tech-informed view on barriers to being able to consume proof? Stephen Gill
+How do we enable automation of data exchange for organisations that can't take advantage of APIs? Harry Trimble
+How might we enable more technical orgs to check a proof automatically e.g. via an API? Darwin Peltan
+Legality and contracts
+How would we enable this legally? I.e. this makes it sound simple but would data sharing agreements would be required for each new instance? Or would it be consent led by citizens? Fay Beverton
+
+GOV.UK Life Events
+Value proposition
+What are the cross-overs with the 'Tell Gov Once' platform idea? Fay Beverton
+What "life events" should be prioritised? Most value to the three different user groups? Harry Trimble
+How often are there significant enough cross-overs in eligibility criteria? Ethan Mills
+Can we create template data sharing agreements? Carly Gilson
+How much should creating data sharing agreements be part of the GDX platform, product, business model? Harry Trimble
+This whole journey is a simplified version of CDDO's Design a Data Share work. They have rich research into what the needs are here and it's more complicated - we would need to link up with this. Fay Beverton
+What are the high level needs for a sub-pub platform? We have them for GOV.UK Proof concept. How much data should be viewable in a proof without authentification? Harry Trimble
+Technical constraints
+What are the Tech-informed view on barriers to being able to consume life events? Stephen Gill
+To what extent can LAs make use of this information? Automatically? Ethan Mills
+Legality and contracts
+There's probably a way to frame this that's less problematic from a legal point of view - (1) sign in to view events you're already allowed to sub to; then (2) request the creation of a new DSA to allow access to a new sub Stephen Gill
+What are the laws around the sharing of medical data? Fay Beverton
+Notifications
+Who would be sending this out? DWP or the local authority? Fay Beverton
+What level of detail do local authorities need here? Fay Beverton
+Consent and transparency
+What services need there own separate platform to record consent? Harry Trimble
+Might need to let user choose which services / teams to share with in LA? Darwin Peltan
+What auditing is needed? Harry Trimble
+Routing to right organisation
+How accurately can we determine the local authority that the citizen is in? Fay Beverton
+Would we need to share with more than one LA? Darwin Peltan
+Admin settings
+How to deal with multiple teams / systems in a LA needing this data? Darwin Peltan
+Alternative journeys
+What would the journey look like if someone applied for school transport who was already receiving DLA (e.g ask someone to consent to council asking DWP for their data as part of the application journey)
+
+
+  </div>
+</div>
+
+{% endblock %}

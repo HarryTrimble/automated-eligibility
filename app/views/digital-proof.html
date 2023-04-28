@@ -21,16 +21,12 @@
         <ul class="govuk-summary-card__actions">
           <li class="govuk-summary-card__action">
             <span class="govuk-caption-m">Certificate of Registration</span>
-            <h1 class="govuk-heading-m">Henrik Colleymore</h1>
+            <h1 class="govuk-heading-m" style="margin-bottom: 0px;">Henrik Colleymore</h1>
           </li>
         </ul>
       </div>
-      <div class="govuk-summary-card__content" style="background-color: #f3f2f1;">
-      </div>
-      <div class="govuk-summary-card__title-wrapper" style="background-color: #b1b4b6;">
-        <h2 class="govuk-summary-card__title ">
-          Created 6 April 2022<br>Expires 11 June 2025
-                  <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 0px;">
+      <div class="govuk-summary-card__content" style="background-color: #f3f2f1; padding-top: 0px; padding-bottom: 15px;">
+        <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 0px;">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text" style="color: black;">
               Show details
@@ -97,17 +93,36 @@
         </dl>
           </div>
         </details>
-        </h2>
-        <ul class="govuk-summary-card__actions">
-          <li class="govuk-summary-card__action govuk-!-font-weight-regular">
-                    <div class="govuk-!-font-weight-regular" style="width: 150px; height: 150px; border: solid 2px black; text-align: center; padding-bottom: 40px; background-color: white;">
+      </div>
+      <div class="govuk-summary-card__title-wrapper" style="background-color: #b1b4b6;">
+        <h2 class="govuk-summary-card__title ">
+          <div class="govuk-!-font-weight-regular" style="width: 150px; height: 150px; border: solid 2px black; text-align: center; padding-bottom: 40px; background-color: white;">
             <canvas id="qr-code-canvas" style="width: 150px; height: 150px"></canvas>
             <span class="govuk-body" style="font-size: 24px;">HDJ2123F82</span>
           </div>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action govuk-!-font-weight-regular">Created 6 April 2022<br>Expires 11 June 2025
           </li>
         </ul>
       </div>
     </div>
+
+<div class="govuk-button-group">
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="background-color: #0b0c0c; color: #ffffff;">
+    Add to GOV.UK Account
+  </button>
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="background-color: #0b0c0c; color: #ffffff;">
+    Add to Apple Wallet
+  </button>
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Copy share code
+  </button>
+  <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+    De-activate this proof
+  </button>
+</div>
+
 </div>
 
 {% block pageScripts %}
