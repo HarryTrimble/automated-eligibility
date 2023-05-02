@@ -1,0 +1,125 @@
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "./components/dashboard-links.html" import dashboardLinks %}
+{% extends "layouts/life-events/main.html" %}
+
+{% block pageTitle %}
+  Home - GOV.UK Life Events
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p style="margin-bottom: 0;"><span class="govuk-!-font-weight-bold">Department for Work and Pensions</span>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {{ dashboardLinks("Life events") }}
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">Life event</h3>
+
+      {{ govukTable({
+        caption: "Child Disability Living Allowance",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        head: [
+          {text: "Performance"},
+          {
+            format: "numeric"
+          },
+          {
+            format: "numeric"
+          }
+        ],
+        rows: [
+          [
+            {text: "Sent in last 7 days"},
+            {
+              text: "19,923",
+              format: "numeric"
+            },
+            {
+              html: "<a href=\"#\">View</a>",
+              format: "numeric"
+            }
+          ],
+          [
+            {text: "Sent in today"},
+            {
+              text: "49,234",
+              format: "numeric"
+            },
+            {
+              html: "<a href=\"#\">View</a>",
+              format: "numeric"
+            }
+          ],
+          [
+            {text: "Organisations"},
+            {
+              text: "73",
+              format: "numeric"
+            },
+            {
+              html: "<a href=\"#\">View</a>",
+              format: "numeric"
+            }
+          ],
+          [
+            {text: "Services"},
+            {
+              text: "263",
+              format: "numeric"
+            },
+            {
+              html: "<a href=\"#\">View</a>",
+              format: "numeric"
+            }
+          ]
+        ]
+      }) }}
+
+      <br>
+      <br>
+
+      {{ govukTable({
+        firstCellIsHeader: true,
+        head: [
+          {text: "Templates"},
+          {
+            format: "numeric"
+          },
+          {
+            format: "numeric"
+          }
+        ],
+        rows: [
+          [
+            {text: "Publicity information"},
+            {
+              html: "<a href=\"#\">View</a>",
+              format: "numeric"
+            },
+            {
+              html: "<a href=\"#\">Edit</a>",
+              format: "numeric"
+            }
+          ],
+          [
+            {text: "Consent page"},
+            {
+              html: "<a href=\"#\">View</a>",
+              format: "numeric"
+            },
+            {
+              html: "<a href=\"#\">Edit</a>",
+              format: "numeric"
+            }
+          ]
+        ]
+      }) }}
+
+{% endblock %}
