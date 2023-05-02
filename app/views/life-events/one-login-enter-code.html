@@ -1,0 +1,51 @@
+{% extends "../layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK Life Events
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Check your phone
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <p class="govuk-body">We have sent a code to the phone number linked to your GOV.UK One Login.</p>
+        <p class="govuk-body">It might take a few minutes to arrive. The code will expire after 15 minutes.</p>
+
+        {{ govukInput({
+          label: {
+            text: "Enter the 6 digit security code"
+          },
+          classes: "govuk-input--width-10",
+          id: "width-10",
+          name: "width-10"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+        {{ govukDetails({
+          summaryText: "Problems with the code?",
+          text: ""
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
