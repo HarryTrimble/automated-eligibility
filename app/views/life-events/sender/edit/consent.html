@@ -1,0 +1,87 @@
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "../components/dashboard-links.html" import dashboardLinks %}
+{% extends "layouts/life-events/main.html" %}
+
+{% block pageTitle %}
+  Home - GOV.UK Life Events
+{% endblock %}
+
+{#<div class=\"govuk-width-container\">#}
+{#  <h3 class=\"govuk-heading-m\">Heading</h3>#}
+{#  <p>Some text</p>#}
+{#</div>#}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p style="margin-bottom: 0;"><span class="govuk-!-font-weight-bold">Department for Work and Pensions</span>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <script src="/public/javascripts/govukMarkdownIt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {{ dashboardLinks("Life events") }}
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "/life-events/sender/life-events"
+      }) }}
+
+      <h3 class="govuk-heading-m">Child Disability Living Allowance</h3>
+      <h3 class="govuk-heading-m">Edit consent page</h3>
+      <br>
+      {{ govukTextarea({
+        name: "input-consent-md",
+        id: "input-consent-md",
+        label: {
+          text: "Input",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        value: "
+# Heading 1
+## Heading 2
+- Some
+- Bullet
+- Points
+"
+      }) }}
+      <br>
+      <h3 class="govuk-heading-l">Preview</h3>
+      <div id="preview-md" style="border: #0b0c0c 2px solid; padding: 15px">
+      </div>
+      <br>
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Publish",
+          href: "/life-events/sender/life-events"
+        }) }}
+
+        {{ govukButton({
+          text: "Save draft",
+          classes: "govuk-button--secondary",
+          href: "/life-events/sender/life-events"
+        }) }}
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+      const md = window.markdownit();
+      md.use(window.govukMarkdownIt)
+      const updateMd = () => {
+          const input = document.getElementById("input-consent-md").value;
+          document.getElementById("preview-md").innerHTML = md.render(input);
+      }
+      document.getElementById("input-consent-md").onchange = updateMd
+      updateMd()
+  </script>
+{% endblock %}
