@@ -7,7 +7,45 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Agree to share your child Disability Living Allowance information</h1>
+
+    <p class="govuk-body">To automatically apply for free school transport, you need to agree to share your Disability Living Allowance information with <span class="govuk-!-font-weight-bold">Arnsford District Council</span>.
+
+    <p>Arnsford District Council will use your:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Child's name</li>
+      <li>Child's date of birth</li>
+      <li>Child's school</li>
+      <li>Child's disability affects they're disability</li>
+      <li>Name</li>
+      <li>Postal address</li>
+      <li>Email address</li>
+      <li>Phone number</li>
+   </ul>
+
+    <p class="govuk-body">Read the <a href="#">terms of use and privacy policy</a> for Arnsford District Council to check how your information will be used.</p>
+
+    <p class="govuk-body">If you do not agree to re-use information from your child Disability Living Allowance, you will need to <a href="#">fill out the application form</a>.</p>
+
+
+            <form action="/life-events/confirmation-page-application-sent" method="post" novalidate>
+              <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">
+                  I agree
+                </button>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  I do not agree to share this information
+                </button>
+              </div>
+            </form>
+
+      </main>
+    </div>
+
+    <!-- version one copy
     <h1 class="govuk-heading-l">Sharing information with other public services</h1>
     <p class="">Based on what you said in your application for child Disability Living Allowance, you probably also qualify for services from Arnsford District Council:</p>
     <ul class="govuk-list govuk-list--bullet">
@@ -43,6 +81,8 @@
           text: "Continue"
         }) }}
       </form>
+
+    -->
 
   </div>
 </div>
