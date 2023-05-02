@@ -1,0 +1,40 @@
+{% extends "../layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK Life Events
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="one-login-enter-password" method="post">
+
+        {{ govukInput({
+          label: {
+            text: "Enter your email address to sign in to your GOV.UK One Login",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          id: "consent-email",
+          name: "consent-email"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
