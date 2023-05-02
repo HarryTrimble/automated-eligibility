@@ -1,3 +1,4 @@
+{% from "./components/dashboard-links.html" import dashboardLinks %}
 {% extends "layouts/life-events/main.html" %}
 
 {% block pageTitle %}
@@ -5,49 +6,33 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-    <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">Department for Work and Pensions</span>
-</div>
+  <div class="govuk-phase-banner">
+    <p style="margin-bottom: 0;"><span class="govuk-!-font-weight-bold">Department for Work and Pensions</span>
+  </div>
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
-    <ul class="govuk-list">
-      <li>
-        <a class="govuk-link govuk-!-font-weight-bold" href="#">Dashboard</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="/uni/select-template">Life events</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">Services</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">Settings</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">API integration</a>
-      </li>
-    </ul>
-  </div>
-  <div class="govuk-grid-column-two-thirds">
-    <h3 class="govuk-heading-m">In the last 7 days</h3>
-    <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #1d70b8;">
-      <p style="margin-bottom: 0px; color: white;">
-        <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">151,549</span><br>
-        <a href="#" class="govuk-link" style="color: white;">Life events sent</a></p>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {{ dashboardLinks("Dashboard") }}
     </div>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">In the last 7 days</h3>
+      <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #1d70b8;">
+        <p style="margin-bottom: 0; color: white;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">151,549</span><br>
+          <a href="#" class="govuk-link" style="color: white;">Life events sent</a></p>
+      </div>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Life events</th>
           <th scope="col" class="govuk-table__header govuk-table__header--numeric">Sent in the last 7 days</th>
           <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
         </tr>
-      </thead>
-      <tbody class="govuk-table__body">
+        </thead>
+        <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Child has a disability</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">19,923</td>
@@ -63,21 +48,21 @@
           <td class="govuk-table__cell govuk-table__cell--numeric">24,384</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
         </tr>
-      </tbody>
-    </table>
-    <p class="govuk-body"><a href="#">View all life events</a></p>
-    <br>
-    <br>
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">New requests</caption>
-      <thead class="govuk-table__head">
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all life events</a></p>
+      <br>
+      <br>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">New requests</caption>
+        <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Organisation</th>
           <th scope="col" class="govuk-table__header govuk-table__header--numeric">Life event requested</th>
           <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
         </tr>
-      </thead>
-      <tbody class="govuk-table__body">
+        </thead>
+        <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Arnsford District Council</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">Child has a disability</td>
@@ -93,21 +78,21 @@
           <td class="govuk-table__cell govuk-table__cell--numeric">Leaving Universal Credit</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
         </tr>
-      </tbody>
-    </table>
-    <p class="govuk-body"><a href="#">View all requests</a></p>
-    <br>
-    <br>
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Progressing requests</caption>
-      <thead class="govuk-table__head">
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all requests</a></p>
+      <br>
+      <br>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Progressing requests</caption>
+        <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Organisation</th>
           <th scope="col" class="govuk-table__header govuk-table__header--numeric">Status</th>
           <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
         </tr>
-      </thead>
-      <tbody class="govuk-table__body">
+        </thead>
+        <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Kentmouth Borough Council</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">
@@ -135,10 +120,10 @@
           </td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
         </tr>
-      </tbody>
-    </table>
-    <p class="govuk-body"><a href="#">View all open requests</a></p>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all open requests</a></p>
+    </div>
   </div>
-</div>
 
 {% endblock %}
