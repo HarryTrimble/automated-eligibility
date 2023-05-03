@@ -1,7 +1,7 @@
-{% extends "../layouts/main.html" %}
+{% extends "../layouts/plain.html" %}
 
 {% block pageTitle %}
-  GOV.UK Life Events
+  GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,7 +16,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="one-login-enter-password" method="post">
+      <form class="form" action="/life-events/one-login-enter-password" method="post">
 
         {{ govukInput({
           label: {

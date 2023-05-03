@@ -9,37 +9,42 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Check what information you're sharing before sending your application</h1>
+    <h1 class="govuk-heading-l">Apply for free school transport</h1>
 
-    <p class="govuk-body">To automatically apply for free school transport, you need to agree to share your Disability Living Allowance information with <span class="govuk-!-font-weight-bold">Arnsford District Council</span>.
+    <p class="govuk-body">
+      Based on your application for Disability Living Allowance (DLA), you may be able to get more help from Arnford Borough Council. For example, help with school transport costs.
+    </p>
 
-    <p>Arnsford District Council will use your:</p>
+    <p class="govuk-body">
+      If you want to apply for help from Arnsford Borough Council, we can save you time by passing on the information you’ve already provided in your DLA application.
+    </p>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Child's name</li>
-      <li>Child's date of birth</li>
-      <li>Child's school</li>
-      <li>Child's disability affects they're disability</li>
-      <li>Name</li>
-      <li>Postal address</li>
-      <li>Email address</li>
-      <li>Phone number</li>
-    </ul>
+    <form action="/life-events/consent" method="post" novalidate>
 
-    <p class="govuk-body">Read the <a href="#">terms of use and privacy policy</a> for Arnsford District Council to check how your information will be used.</p>
+        {{ govukRadios({
+          name: "interview-needs",
+          fieldset: {
+            legend: {
+              text: "Do you want us to pass your details to Arnsford Borough Council?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "automatic",
+              text: "Yes, pass on the details I’ve already provided in my DLA application "
+            },
+          {
+            value: "manual",
+            text: "No, do not pass on my details - I’ll enter the information again"
+          }
+        ]
+      }) }}
 
-    <p class="govuk-body">If you do not agree to re-use information from your child Disability Living Allowance, you will need to <a href="#">fill out the application form</a>.</p>
-
-
-    <form action="/life-events/confirmation-page-application-sent" method="post" novalidate>
-      <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-          Accept and send
-        </button>
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Do nothing
-        </button>
-      </div>
+      {{ govukButton({
+        text: "Continue"
+      }) }}
     </form>
 
     <!-- version one copy
@@ -58,8 +63,7 @@
 
     <p class="govuk-body">To save you time, we can pass on the information you provided in your [child DLA] application to help you apply for council services. <a href="#">Find out more about how we use your personal information</a>.</p>
 
-    <form action="/life-events/confirmation-page-application-sent" method="post" novalidate>
-
+      <form action="/life-events/confirmation-page-application-sent" method="post" novalidate>
         {{ govukRadios({
           name: "where-do-you-live",
           items: [
