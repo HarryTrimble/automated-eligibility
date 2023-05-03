@@ -5,71 +5,71 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
+  <div class="govuk-phase-banner">
     <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">University of Arnsford</span>
-</div>
+  </div>
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
-    <ul class="govuk-list">
-      <li>
-        <a class="govuk-link" href="/uni/home-page">Dashboard</a>
-      </li>
-      <li>
-        <a class="govuk-link govuk-!-font-weight-bold" href="#">Generate proof</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">Templates</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">Check proof</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">Settings</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">API integration</a>
-      </li>
-    </ul>
-  </div>
-  <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/uni/fill-in-proof-details" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="/uni/home-page">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Generate proof</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Templates</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Check proof</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Settings</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">API integration</a>
+        </li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/uni/fill-in-proof-details" method="post">
 
-      {{ govukRadios({
-        name: "inputtype",
-        value: data['inputtype'],
-        fieldset: {
-          legend: {
-            text: "How do you want to create proofs?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
-          }
-        },
-        items: [
-          {
-            value: "form",
-            text: "Fill in a form - one proof at a time"
+        {{ govukRadios({
+          name: "inputtype",
+          value: data['inputtype'],
+          fieldset: {
+            legend: {
+              text: "How do you want to create proofs?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
           },
-          {
-            value: "spreadsheet",
-            text: "Upload a spreadsheet - one proof or more"
-          },
-          {
-            value: "email",
-            text: "Send email with details - one proof or more"
-          }
-        ]
-      }) }}
+          items: [
+            {
+              value: "form",
+              text: "Fill in a form - one proof at a time"
+            },
+            {
+              value: "spreadsheet",
+              text: "Upload a spreadsheet - one proof or more"
+            },
+            {
+              value: "email",
+              text: "Send email with details - one proof or more"
+            }
+          ]
+        }) }}
 
-      {{ govukButton({
-        text: "Continue"
-      }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
 
       </form>
+    </div>
   </div>
-</div>
 
 {% endblock %}

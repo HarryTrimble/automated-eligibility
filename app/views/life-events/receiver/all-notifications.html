@@ -14,71 +14,72 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-    <h1 class="govuk-heading-l">
-      All notifications (1136)
-    </h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">
+        All notifications (1136)
+      </h1>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      {{ govukButton({
+        text: "Download all",
+        style: "float: right"
+      }) }}
+    </div>
   </div>
-  <div class="govuk-grid-column-one-quarter">
-  {{ govukButton({
-    text: "Download all",
-    style: "float: right"
-  }) }}
-  </div>
-</div>
 
-<table class="govuk-table">
-  <thead class="govuk-table__head">
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Child name</th>
       <th scope="col" class="govuk-table__header">Time until expiry</th>
       <th scope="col" class="govuk-table__header">Use</th>
       <th scope="col" class="govuk-table__header">Download as CSV</th>
     </tr>
-  </thead>
-  <tbody class="govuk-table__body">
+    </thead>
+    <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row"class="govuk-table__header">Karl Kanaa</th>
+      <th scope="row" class="govuk-table__header">Karl Kanaa</th>
       <td class="govuk-table__cell">28 days</td>
       <td class="govuk-table__cell">Not downloaded yet</td>
       <td class="govuk-table__cell"><a href="#">Downloaded</a></td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row"class="govuk-table__header">Olivia Lane</th>
+      <th scope="row" class="govuk-table__header">Olivia Lane</th>
       <td class="govuk-table__cell">28 days</td>
       <td class="govuk-table__cell">Not downloaded yet</td>
       <td class="govuk-table__cell"><a href="#">Downloaded</a></td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row"class="govuk-table__header">Alex Goodson</th>
+      <th scope="row" class="govuk-table__header">Alex Goodson</th>
       <td class="govuk-table__cell">28 days</td>
       <td class="govuk-table__cell">Not downloaded yet</td>
       <td class="govuk-table__cell"><a href="#">Downloaded</a></td>
     </tr>
     <tr class="govuk-table__row" style="width: 100%;">
-      <th scope="row"class="govuk-table__header"><br><span style="font-weight: 400; font-size: 24px;">1130 notications - <a href="#">view all notifications</a></span><br><span style="color: white;">.</span></th>
+      <th scope="row" class="govuk-table__header"><br><span style="font-weight: 400; font-size: 24px;">1130 notications - <a href="#">view all notifications</a></span><br><span
+                style="color: white;">.</span></th>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row"class="govuk-table__header">Alma Syed</th>
+      <th scope="row" class="govuk-table__header">Alma Syed</th>
       <td class="govuk-table__cell" style="border-top: solid 1px #b1b4b6">3 hours</td>
       <td class="govuk-table__cell" style="border-top: solid 1px #b1b4b6"><a href="#">Downloaded 4 times</a></td>
       <td class="govuk-table__cell" style="border-top: solid 1px #b1b4b6"><a href="#">Downloaded</a></td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row"class="govuk-table__header">Keir Westry</th>
+      <th scope="row" class="govuk-table__header">Keir Westry</th>
       <td class="govuk-table__cell">3 hours</td>
       <td class="govuk-table__cell">Not downloaded yet</td>
       <td class="govuk-table__cell"><a href="#">Downloaded</a></td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row"class="govuk-table__header">Hope Gidson</th>
+      <th scope="row" class="govuk-table__header">Hope Gidson</th>
       <td class="govuk-table__cell">3 hours</td>
       <td class="govuk-table__cell"><a href="#">Downloaded 2 times</a></td>
       <td class="govuk-table__cell"><a href="#">Downloaded</a></td>
     </tr>
-  </tbody>
+    </tbody>
 
-</table>
+  </table>
 
 {% endblock %}

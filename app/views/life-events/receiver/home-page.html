@@ -1,48 +1,48 @@
 {% extends "layouts/life-events/main.html" %}
 
 {% block pageTitle %}
-    Home - GOV.UK Life Events
+  Home - GOV.UK Life Events
 {% endblock %}
 
 {% block beforeContent %}
-    <div class="govuk-phase-banner">
-        <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">Arnsford District Council</span>
-    </div>
+  <div class="govuk-phase-banner">
+    <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">Arnsford District Council</span>
+  </div>
 {% endblock %}
 
 {% block content %}
 
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-            <ul class="govuk-list">
-                <li>
-                    <a class="govuk-link govuk-!-font-weight-bold" href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a class="govuk-link" href="/uni/select-template">Life events</a>
-                </li>
-                <li>
-                    <a class="govuk-link" href="#">Services</a>
-                </li>
-                <li>
-                    <a class="govuk-link" href="#">Settings</a>
-                </li>
-                <li>
-                    <a class="govuk-link" href="#">API integration</a>
-                </li>
-            </ul>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-            <h3 class="govuk-heading-m">In the last 7 days</h3>
-            <h4 class="govuk-heading-s">Child has a disability</h4>
-            <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #1d70b8;">
-                <p style="margin-bottom: 0px; color: white;">
-                    <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">309</span><br>
-                    <a href="#" class="govuk-link" style="color: white;">Events received</a></p>
-            </div>
-            <p class="govuk-body"><a href="/public/notifications.csv" download="child-with-disability-20042023-161723.csv">Download as CSV</a></p>
-            <p class="govuk-body"><a href="/life-events/receiver/all-notifications">View all notifications</a></p>
-        </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/uni/select-template">Life events</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Services</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Settings</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">API integration</a>
+        </li>
+      </ul>
     </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">In the last 7 days</h3>
+      <h4 class="govuk-heading-s">Child has a disability</h4>
+      <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #1d70b8;">
+        <p style="margin-bottom: 0px; color: white;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">309</span><br>
+          <a href="#" class="govuk-link" style="color: white;">Events received</a></p>
+      </div>
+      <p class="govuk-body"><a href="/public/notifications.csv" download="child-with-disability-20042023-161723.csv">Download as CSV</a></p>
+      <p class="govuk-body"><a href="/life-events/receiver/all-notifications">View all notifications</a></p>
+    </div>
+  </div>
 
 {% endblock %}

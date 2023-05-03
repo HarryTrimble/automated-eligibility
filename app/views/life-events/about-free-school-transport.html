@@ -1,25 +1,25 @@
 {% extends "layouts/plain.html" %}
 
 {% block pageTitle %}
-  GOV.UK 
+  GOV.UK
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Apply for free school transport</h1>
+      <h1 class="govuk-heading-l">Apply for free school transport</h1>
 
-    <p class="govuk-body">
-      Based on your application for Disability Living Allowance (DLA), you may be able to get more help from Arnford Borough Council. For example, help with school transport costs.
-    </p>
+      <p class="govuk-body">
+        Based on your application for Disability Living Allowance (DLA), you may be able to get more help from Arnford Borough Council. For example, help with school transport costs.
+      </p>
 
-    <p class="govuk-body">
-      If you want to apply for help from Arnsford Borough Council, we can save you time by passing on the information you’ve already provided in your DLA application.
-    </p>
+      <p class="govuk-body">
+        If you want to apply for help from Arnsford Borough Council, we can save you time by passing on the information you’ve already provided in your DLA application.
+      </p>
 
-    <form action="/life-events/consent" method="post" novalidate>
+      <form action="/life-events/consent" method="post" novalidate>
 
         {{ govukRadios({
           name: "interview-needs",
@@ -35,19 +35,19 @@
               value: "automatic",
               text: "Yes, pass on the details I’ve already provided in my DLA application "
             },
-          {
-            value: "manual",
-            text: "No, do not pass on my details - I’ll enter the information again"
-          }
-        ]
-      }) }}
+            {
+              value: "manual",
+              text: "No, do not pass on my details - I’ll enter the information again"
+            }
+          ]
+        }) }}
 
-      {{ govukButton({
-        text: "Continue"
-      }) }}
-    </form>
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
 
-    <!-- version one copy
+      <!-- version one copy
     <h1 class="govuk-heading-l">Sharing information with other public services</h1>
     <p class="">Based on what you said in your application for child Disability Living Allowance, you probably also qualify for services from Arnsford District Council:</p>
     <ul class="govuk-list govuk-list--bullet">
@@ -65,27 +65,27 @@
 
       <form action="/life-events/confirmation-page-application-sent" method="post" novalidate>
         {{ govukRadios({
-          name: "where-do-you-live",
-          items: [
-            {
-              value: "england",
-              text: "Yes, pass on the information I’ve already provided in my [child DLA] application "
-            },
-            {
-              value: "scotland",
-              text: "No, do not pass on my details - but send me a link to those services anyway"
-            }
-          ]
-        }) }}
+        name: "where-do-you-live",
+        items: [
+          {
+            value: "england",
+            text: "Yes, pass on the information I’ve already provided in my [child DLA] application "
+          },
+          {
+            value: "scotland",
+            text: "No, do not pass on my details - but send me a link to those services anyway"
+          }
+        ]
+      }) }}
 
         {{ govukButton({
-          text: "Continue"
-        }) }}
+        text: "Continue"
+      }) }}
       </form>
 
     -->
 
+    </div>
   </div>
-</div>
 
 {% endblock %}
