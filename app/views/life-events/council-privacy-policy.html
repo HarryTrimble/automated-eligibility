@@ -1,0 +1,225 @@
+{% extends "layouts/council.html" %}
+
+{% block pageTitle %}
+  Automated Eligibility
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Privacy policy
+    </h1>
+
+    <p class="govuk-body">Two teams on GDS' Government Data Exchange (GDX) programme spent several weeks exploring different ways automated eligibility checking between public services could work.</p>
+
+    <p class="govuk-body">The aims of the prototypes were:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Help ask better <a href="/questions">questions about the value propositon</a> of a GDX platform</li>
+      <li>Focus interviews with public sector organisatiuons about eligibility on opportunities and details</li>
+    </ul>
+
+    <p class="govuk-body">The prototypes are of two fictional software platforms called <a class="govuk-link" href="/product-splash-page">GOV.UK Proof</a> and <a class="govuk-link" href="/life-events/product-splash-page">GOV.UK Life Events</a>. Both prototypes uses scenarios where data is shared between different public sector organisations reduce the burdens and costs of eligibility checking.</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="https://github.com/HarryTrimble/tech-spike-govuk-proof">View prototype code on GitHub</a></p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <br><br>
+    <h2 class="govuk-heading-l">GOV.UK Proof</h2>
+
+    <p>This prototype uses the scenario of a university giving a student proof they are entitled to a council tax exemption from a local authority. </p>
+
+
+    <h3 class="govuk-heading-s">Create proof as a university</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/product-splash-page">Start page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/sign-in">Sign in</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/text-code">Two factor authentification</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/home-page">Dashboard home page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/select-template">Select proof template</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/method-volume">Pick upload type</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/fill-in-proof-details">Enter details form</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/check-answers">Check answers</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/uni/proof-confirmation">Generate and share proof</a>
+      </li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Share proof as a student</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/url-proof-id">Digital proof of full-time education</a>
+      </li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Check proof as a local authority</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/council/sign-in">Sign in</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/council/text-code">Two factor authentification</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/council/home-page">Dashboard home page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/council/enter-proof-id">Enter proof ID number</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/council/proof-check-confirmation">Valid proof</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <br><br>
+    <h2 class="govuk-heading-l">GOV.UK Life Events</h2>
+
+    <p>This prototype uses the scenario of the Department for Work and Pensions allowing other public sector organisations to get notified when a user successfully applies for child Disability Living Allowance, so that they may provide proactive services supporting families of children with disabilities.</p>
+
+    <h3 class="govuk-heading-s">Request a life event as a local authority</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/life-events/product-splash-page">Start page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/notification-details">Notification details</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/fill-out-request">Fill out request</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/check-answers">Check your answers</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/confirmation">Confirmation and next steps</a>
+      </li>
+    </ul>
+
+    <h3 class="govuk-heading-s">View requests as a sender of life events</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/life-events/sender/sign-in">Sign in</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/sender/text-code">Two factor authentification</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/sender/dashboard">Dashboard home page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/sender/life-events">View life events</a>
+      </li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Give consent to pass details as a user</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/life-events/dla-award-email">Email about getting one service</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/about-free-school-transport">About free school transport</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/consent">Consent to reuse information</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/council-privacy-policy">Council privacy policy</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/confirmation-page-application-sent">Confirmation page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/one-login-enter-email">Sign into GOV.UK One Login</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/account-history">Account history</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/account-history">View data share details</a>
+      </li>
+    </ul>
+
+    <h3 class="govuk-heading-s">View events as a local authority</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/life-events/receiver/new-notifications-email">New notifications</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/receiver/sign-in">Sign in</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/receiver/text-code">Two factor authentication</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/receiver/home-page">Dashboard home page</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/receiver/all-notifications">View all notifications</a>
+      </li>
+    </ul>
+    
+    <h3 class="govuk-heading-s">Proactive services from local authority</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/life-events/la-email">Email offering services</a>
+      </li>
+    </ul>
+
+    <h3 class="govuk-heading-s">View consent you have given as a user</h3>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>
+        <a class="govuk-link" href="/life-events/one-login-enter-email">Enter email</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/one-login-enter-password">Enter password</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/life-events/one-login-enter-code">Enter 2FA code</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}
