@@ -55,35 +55,49 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 		{% block content %}
 			   <div class="govuk-grid-row" id="your-services">
                <div class="govuk-grid-column-two-thirds">
-                  <span class="govuk-caption-l">History</span>
-                  <h1 class="govuk-heading-l">Information about you shared with Arnsford District Council.</h1>
-                  <p class="govuk-body-l">You consented to shared details from your child Disability Living Allowance to apply for Arnsford District Council free school transport service.</p>
-                  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+               		<a href="/life-events/account-history" class="govuk-back-link">Back to account history</a>
+               		<br><br>
+                  <p class="govuk-body-l">You applied for free school transport reusing information from your child Disability Living Allowance.</p>
 
-                  <ul class="govuk-list govuk-!-font-size-16">
-                    <li>
-                      From: <span class="govuk-!-font-weight-bold" href="#">Department for Work and Pensions</span>
-                    </li>
-                    <li>
-                      To: <span class="govuk-!-font-weight-bold" href="#">Arnsford District Council</span>
-                    </li>
-                    <li>
-                      Date shared: 4 August 2025</a>
-                    </li>
-                  </ul>
+                  <!-- informaton shared with Arnford District Council 👇 --> 
+                  <div class="govuk-summary-card">
+                     <div class="govuk-summary-card__title-wrapper" style="background-color: transparent;">
+                        <h2 class="govuk-summary-card__title">
+                           <strong class="govuk-tag govuk-tag--blue">
+                              Information shared
+                           </strong>
+                        </h2>
+                     </div>
+                     <div class="govuk-summary-card__content">
+			                  <p class="">Department for Work and Pensions shared with Arnsford Distriction Council your:</p>
+			                  <ul class="govuk-list govuk-list--bullet">
+			                     <li>Child's name</li>
+			                     <li>Child's date of birth</li>
+			                     <li>Child's school</li>
+			                     <li>Child's disability affects they're disability</li>
+			                     <li>Name</li>
+			                     <li>Postal address</li>
+			                     <li>Email address</li>
+			                     <li>Phone number</li>
+			                  </ul>
+                     </div>
+                     <div class="govuk-summary-card__title-wrapper">
+                        <h2 class="govuk-summary-card__title">
+				                  <ul class="govuk-list govuk-!-font-size-16" style="margin-bottom: 0px;">
+				                    <li>
+				                      From: <span class="govuk-!-font-weight-bold" href="#">Department for Work and Pensions</span>
+				                    </li>
+				                    <li>
+				                      To: <span class="govuk-!-font-weight-bold" href="#">Arnsford District Council</span>
+				                    </li>
+				                    <li>
+				                      Date shared: 11:27 on 4 August 2025</a>
+				                    </li>
+				                  </ul>
+                        </h2>
+                     </div>
+                  </div>
                    
-                   <p class="">Department for Work and Pensions shared with Arnsford Distriction Council your:</p>
-                   <ul class="govuk-list govuk-list--bullet">
-                     <li>Child's name</li>
-                     <li>Child's date of birth</li>
-                     <li>Child's school</li>
-                     <li>Child's disability affects they're disability</li>
-                     <li>Name</li>
-                     <li>Postal address</li>
-                     <li>Email address</li>
-                     <li>Phone number</li>
-                   </ul>
-
                    <h2 class="govuk-heading-m">
                       Delete information
                    </h2>
@@ -117,6 +131,9 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
                   Phone: 01749 341479
                   </p>
 
+               </div>
+               <div class="govuk-grid-column-one-third">
+               	
                </div>
             </div>
 		{% endblock %}
