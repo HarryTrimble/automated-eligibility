@@ -1,45 +1,45 @@
 {% extends "layouts/plain.html" %}
 
 {% block pageTitle %}
-  GOV.UK 
+  GOV.UK
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Check what information you're sharing before sending your application</h1>
+      <h1 class="govuk-heading-l">Check what information you're sharing before sending your application</h1>
 
-    <p class="govuk-body">To automatically apply for free school transport, you need to agree to share your Disability Living Allowance information with <span class="govuk-!-font-weight-bold">Arnsford District Council</span>.
+      <p class="govuk-body">To automatically apply for free school transport, you need to agree to share your Disability Living Allowance information with <span class="govuk-!-font-weight-bold">Arnsford District Council</span>.
 
-    <p>Arnsford District Council will use your:</p>
+      <p>Arnsford District Council will use your:</p>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Child's name</li>
-      <li>Child's date of birth</li>
-      <li>Child's school</li>
-      <li>Child's disability affects they're disability</li>
-      <li>Name</li>
-      <li>Postal address</li>
-      <li>Email address</li>
-      <li>Phone number</li>
-    </ul>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Child's name</li>
+        <li>Child's date of birth</li>
+        <li>Child's school</li>
+        <li>Child's disability affects they're disability</li>
+        <li>Name</li>
+        <li>Postal address</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+      </ul>
 
-    <p class="govuk-body">Read the <a href="#">terms of use and privacy policy</a> for Arnsford District Council to check how your information will be used.</p>
+      <p class="govuk-body">Read the <a href="#">terms of use and privacy policy</a> for Arnsford District Council to check how your information will be used.</p>
 
-    <p class="govuk-body">If you do not agree to re-use information from your child Disability Living Allowance, you will need to <a href="#">fill out the application form</a>.</p>
+      <p class="govuk-body">If you do not agree to re-use information from your child Disability Living Allowance, you will need to <a href="#">fill out the application form</a>.</p>
 
 
-    <form action="/life-events/confirmation-page-application-sent" method="post" novalidate>
-      <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-          Accept and send
-        </button>
-      </div>
-    </form>
+      <form action="/life-events/confirmation-page-application-sent" method="post" novalidate>
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and send
+          </button>
+        </div>
+      </form>
 
-    <!-- version one copy
+      <!-- version one copy
     <h1 class="govuk-heading-l">Sharing information with other public services</h1>
     <p class="">Based on what you said in your application for child Disability Living Allowance, you probably also qualify for services from Arnsford District Council:</p>
     <ul class="govuk-list govuk-list--bullet">
@@ -58,27 +58,27 @@
     <form action="/life-events/confirmation-page-application-sent" method="post" novalidate>
 
         {{ govukRadios({
-          name: "where-do-you-live",
-          items: [
-            {
-              value: "england",
-              text: "Yes, pass on the information I’ve already provided in my [child DLA] application "
-            },
-            {
-              value: "scotland",
-              text: "No, do not pass on my details - but send me a link to those services anyway"
-            }
-          ]
-        }) }}
+        name: "where-do-you-live",
+        items: [
+          {
+            value: "england",
+            text: "Yes, pass on the information I’ve already provided in my [child DLA] application "
+          },
+          {
+            value: "scotland",
+            text: "No, do not pass on my details - but send me a link to those services anyway"
+          }
+        ]
+      }) }}
 
         {{ govukButton({
-          text: "Continue"
-        }) }}
+        text: "Continue"
+      }) }}
       </form>
 
     -->
 
+    </div>
   </div>
-</div>
 
 {% endblock %}

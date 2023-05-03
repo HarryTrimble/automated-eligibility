@@ -1,19 +1,19 @@
 {% macro dashboardLinks(page) %}
-<ul class="govuk-list">
+  <ul class="govuk-list">
     <li>
-        <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "Dashboard" else ""}}" href="/life-events/sender/dashboard">Dashboard</a>
+      <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "Dashboard" else "" }}" href="/life-events/sender/dashboard">Dashboard</a>
     </li>
     <li>
-        <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "Life events" else ""}}" href="/life-events/sender/life-events">Life events</a>
+      <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "Life events" else "" }}" href="/life-events/sender/life-events">Life events</a>
     </li>
     <li>
-        <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "Services" else ""}}" href="#">Services</a>
+      <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "Services" else "" }}" href="#">Services</a>
     </li>
     <li>
-        <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "Settings" else ""}}" href="#">Settings</a>
+      <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "Settings" else "" }}" href="#">Settings</a>
     </li>
     <li>
-        <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "API integration" else ""}}" href="#">API integration</a>
+      <a class="govuk-link {{ "govuk-!-font-weight-bold" if page === "API integration" else "" }}" href="#">API integration</a>
     </li>
-</ul>
+  </ul>
 {% endmacro %}

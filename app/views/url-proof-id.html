@@ -6,34 +6,34 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-    <h1 class="govuk-heading-l"><span class="govuk-!-font-weight-regular">Proof ID number: </span> HDJ2123F82</h1>
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title ">
-          <div class="govuk-!-font-weight-regular" style="width: 150px; height: 150px; border: solid 2px black; text-align: center;">
-            <canvas id="qr-code-canvas" style="width: 150px; height: 150px"></canvas>
-          </div>
-        </h2>
-        <ul class="govuk-summary-card__actions">
-          <li class="govuk-summary-card__action govuk-!-font-weight-regular">Expires 11 June 2025
-          </li>
-        </ul>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l"><span class="govuk-!-font-weight-regular">Proof ID number: </span> HDJ2123F82</h1>
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title ">
+            <div class="govuk-!-font-weight-regular" style="width: 150px; height: 150px; border: solid 2px black; text-align: center;">
+              <canvas id="qr-code-canvas" style="width: 150px; height: 150px"></canvas>
+            </div>
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action govuk-!-font-weight-regular">Expires 11 June 2025
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-inset-text">
+        Only public sector organisations can view personal information using this code.
       </div>
     </div>
-    <div class="govuk-inset-text">
-      Only public sector organisations can view personal information using this code.
-    </div>
   </div>
-</div>
 
 {% endblock %}
 
 {% block pageScripts %}
-<script src="/public/javascripts/qrcode.js"></script>
-<script>
-  const data =
+  <script src="/public/javascripts/qrcode.js"></script>
+  <script>
+      const data =
           `Proof ID Number\: HDJ2123F82
 Organisation\: University of Arnsford
 Full name\: Henrik Colleymore
@@ -42,12 +42,12 @@ Course name\: Politics and History BA
 Start date\: 3 10 2022
 End date\: 11 6 2025
 Address\: 72 Guild Street, Arnsford, AR23 6FH`
-  QRCode.toCanvas(
+      QRCode.toCanvas(
           document.getElementById('qr-code-canvas'),
-          data, { width: 150 },
+          data, {width: 150},
           function (error) {
-            if (error) console.error(error)
-            console.log('success!');
+              if (error) console.error(error)
+              console.log('success!');
           })
-</script>
+  </script>
 {% endblock %}

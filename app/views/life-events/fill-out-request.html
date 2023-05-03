@@ -7,181 +7,181 @@
 
 {% block content %}
 
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-            <h1 class="govuk-heading-l">
-                Request notifications about children who start receiving Disability Living Allowance
-            </h1>
-            
-            {{ govukNotificationBanner({
-                text: "It currently takes five months to create data sharing agreements with Department for Work and Pension and approve requests for this data"
-            }) }}
+      <h1 class="govuk-heading-l">
+        Request notifications about children who start receiving Disability Living Allowance
+      </h1>
 
-            <form action="/life-events/check-answers" method="get">
-                <div class="govuk-form-group">
+      {{ govukNotificationBanner({
+        text: "It currently takes five months to create data sharing agreements with Department for Work and Pension and approve requests for this data"
+      }) }}
 
-                    <h2 class="govuk-heading-l">Your details</h2>
-                    {{ govukInput({
-                        label: {
-                            text: "Full name",
-                            classes: "govuk-label--s",
-                            isPageHeading: false
-                        }
-                    }) }}
-                    {{ govukInput({
-                        label: {
-                            text: "Email",
-                            classes: "govuk-label--s",
-                            isPageHeading: false
-                        },
-                        hint: {
-                            text: "This must be a gov.uk or nhs.uk email, such as first.last@example-council.gov.uk"
-                        }
-                    }) }}
-                </div>
+      <form action="/life-events/check-answers" method="get">
+        <div class="govuk-form-group">
 
-
-                <div class="govuk-form-group">
-
-                    <h2 class="govuk-heading-l">Your organisation's details</h2>
-                    {{ govukInput({
-                        label: {
-                            text: "Name",
-                            classes: "govuk-label--s",
-                            isPageHeading: false
-                        }
-                    }) }}
-                    {{ govukRadios({
-                        name: "where-do-you-live",
-                        fieldset: {
-                            legend: {
-                                text: "Organisation type",
-                                isPageHeading: true,
-                                classes: "govuk-fieldset__legend--s"
-                            }
-                        },
-                        items: [
-                            {
-                                value: "england",
-                                text: "Local authority"
-                            },
-                            {
-                                value: "england",
-                                text: "Central government"
-                            },
-                            {
-                                value: "scotland",
-                                text: "NHS trust"
-                            }
-                        ]
-                    }) }}
-                </div>
-
-                {{ govukCheckboxes({
-                    name: "fields",
-                    fieldset: {
-                        legend: {
-                            text: "Which data do you need?",
-                            isPageHeading: true,
-                            classes: "govuk-fieldset__legend--l"
-                        }
-                    },
-                    hint: {
-                        text: "Select all that apply."
-                    },
-                    items: [
-                        {
-                            value: "a",
-                            text: "Child's name"
-                        },
-                        {
-                            value: "b",
-                            text: "Child's date of birth"
-                        },
-                        {
-                            value: "c",
-                            text: "Child's school"
-                        },
-                        {
-                            value: "d",
-                            text: "Child's address"
-                        },
-                        {
-                            value: "e",
-                            text: "Child's sex"
-                        },
-                        {
-                            value: "c",
-                            text: "Does the child have an Educational Health Care Plan (EHCP)?"
-                        },
-                        {
-                            value: "c",
-                            text: "Child's mobility needs"
-                        },
-                        {
-                            value: "c",
-                            text: "Parent/Guardian's name"
-                        },
-                        {
-                            value: "c",
-                            text: "Parent/Guardian's address"
-                        },
-                        {
-                            value: "c",
-                            text: "Parent/Guardian's phone number"
-                        },
-                        {
-                            value: "c",
-                            text: "Parent/Guardian's relationship to child"
-                        }
-                    ]
-                }) }}
-
-                {{ govukCheckboxes({
-                    name: "fields",
-                    fieldset: {
-                        legend: {
-                            text: "Why do you need this data?",
-                            isPageHeading: true,
-                            classes: "govuk-fieldset__legend--l"
-                        }
-                    },
-                    hint: {
-                        text: "Select all that apply."
-                    },
-                    items: [
-                        {
-                            value: "a",
-                            text: "To offer free bus and rail passes"
-                        },
-                        {
-                            value: "b",
-                            text: "To offer subsidised travel"
-                        },
-                        {
-                            value: "b",
-                            text: "To offer a Blue Badge"
-                        },
-                        {
-                            value: "b",
-                            text: "To offer a sensory support service"
-                        },
-                        {
-                            value: "b",
-                            text: "To offer a Max Card"
-                        },
-                        {
-                            value: "b",
-                            text: "To offer a further information and advice service"
-                        }
-                    ]
-                }) }}
-
-                {{ govukButton({
-                    text: "Continue"
-                }) }}
-            </form>
+          <h2 class="govuk-heading-l">Your details</h2>
+          {{ govukInput({
+            label: {
+              text: "Full name",
+              classes: "govuk-label--s",
+              isPageHeading: false
+            }
+          }) }}
+          {{ govukInput({
+            label: {
+              text: "Email",
+              classes: "govuk-label--s",
+              isPageHeading: false
+            },
+            hint: {
+              text: "This must be a gov.uk or nhs.uk email, such as first.last@example-council.gov.uk"
+            }
+          }) }}
         </div>
+
+
+        <div class="govuk-form-group">
+
+          <h2 class="govuk-heading-l">Your organisation's details</h2>
+          {{ govukInput({
+            label: {
+              text: "Name",
+              classes: "govuk-label--s",
+              isPageHeading: false
+            }
+          }) }}
+          {{ govukRadios({
+            name: "where-do-you-live",
+            fieldset: {
+              legend: {
+                text: "Organisation type",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--s"
+              }
+            },
+            items: [
+              {
+                value: "england",
+                text: "Local authority"
+              },
+              {
+                value: "england",
+                text: "Central government"
+              },
+              {
+                value: "scotland",
+                text: "NHS trust"
+              }
+            ]
+          }) }}
+        </div>
+
+        {{ govukCheckboxes({
+          name: "fields",
+          fieldset: {
+            legend: {
+              text: "Which data do you need?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "a",
+              text: "Child's name"
+            },
+            {
+              value: "b",
+              text: "Child's date of birth"
+            },
+            {
+              value: "c",
+              text: "Child's school"
+            },
+            {
+              value: "d",
+              text: "Child's address"
+            },
+            {
+              value: "e",
+              text: "Child's sex"
+            },
+            {
+              value: "c",
+              text: "Does the child have an Educational Health Care Plan (EHCP)?"
+            },
+            {
+              value: "c",
+              text: "Child's mobility needs"
+            },
+            {
+              value: "c",
+              text: "Parent/Guardian's name"
+            },
+            {
+              value: "c",
+              text: "Parent/Guardian's address"
+            },
+            {
+              value: "c",
+              text: "Parent/Guardian's phone number"
+            },
+            {
+              value: "c",
+              text: "Parent/Guardian's relationship to child"
+            }
+          ]
+        }) }}
+
+        {{ govukCheckboxes({
+          name: "fields",
+          fieldset: {
+            legend: {
+              text: "Why do you need this data?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "a",
+              text: "To offer free bus and rail passes"
+            },
+            {
+              value: "b",
+              text: "To offer subsidised travel"
+            },
+            {
+              value: "b",
+              text: "To offer a Blue Badge"
+            },
+            {
+              value: "b",
+              text: "To offer a sensory support service"
+            },
+            {
+              value: "b",
+              text: "To offer a Max Card"
+            },
+            {
+              value: "b",
+              text: "To offer a further information and advice service"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
     </div>
+  </div>
 {% endblock %}
