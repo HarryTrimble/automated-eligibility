@@ -35,20 +35,22 @@
       }) }}
 
       <span class="govuk-caption-m">Child Disability Living Allowance</h3>
-      <h3 class="govuk-heading-xl">Edit consent page</h3>
+      <h3 class="govuk-heading-xl" style="margin-bottom: 30px;">Edit consent page</h3>
 
       {{ govukTextarea({
         name: "input-consent-md",
         id: "input-consent-md",
         label: {
-          text: "Input",
+          text: "Content",
           classes: "govuk-label--l",
           isPageHeading: true
         },
         value: "
 # Check what information you're sharing before sending your application
+
 To automatically apply for (service-name), you need to agree to share your Disability Living Allowance information with (org-name).
-Arnsford District Council will use your:
+
+(org-name) will use your:
 
 - Child's name
 - Child's date of birth
@@ -58,6 +60,7 @@ Arnsford District Council will use your:
 - Postal address
 - Email address
 - Phone number
+
 Read the [terms of use and privacy policy](#) for {org-name} to check how your information will be used.
 
 If you do not agree to re-use information from your child Disability Living Allowance, you will need to [fill out the application form](#).
