@@ -19,10 +19,10 @@
     {{ dashboardLinks("Life events") }}
   </div>
   <div class="govuk-grid-column-two-thirds">
-    <h3 class="govuk-heading-m">Life event</h3>
+      <span class="govuk-caption-l">Life event</h3>
+      <h3 class="govuk-heading-l">Child Disability Living Allowance</h3>
 
     {{ govukTable({
-      caption: "Child Disability Living Allowance",
       captionClasses: "govuk-table__caption--m",
       firstCellIsHeader: true,
       head: [
@@ -83,7 +83,6 @@
     }) }}
 
     <br>
-    <br>
 
     {{ govukTable({
       firstCellIsHeader: true,
@@ -98,7 +97,18 @@
       ],
       rows: [
         [
-          {text: "Publicity information"},
+          {text: "Sign up information"},
+          {
+            html: "<a href=\"#\">View</a>",
+            format: "numeric"
+          },
+          {
+            html: "<a href=\"#\">Edit</a>",
+            format: "numeric"
+          }
+        ],
+        [
+          {text: "Service information"},
           {
             html: "<a href=\"#\">View</a>",
             format: "numeric"
