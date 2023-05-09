@@ -150,3 +150,17 @@
     line-height: 1;
   }
 }
+
+.light-button {
+    background: transparent;
+    color: #0b0c0c;
+    box-shadow: 0 3px 0 #0b0c0c;
+    border: 1px #0b0c0c solid;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 0; 
+    margin-right: 5px;
+}
+
+.light-button:hover {
+  background: #b1b4b6;
+}

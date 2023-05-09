@@ -8,12 +8,12 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
-router.post('/uni/fill-in-proof-details', function(request, response) {
+router.post('/proof/create/fill-in-proof-details', function(request, response) {
 
     var inputtype = request.session.data['inputtype']
     if (inputtype == "spreadsheet"){
-        response.redirect("/uni/upload-spreadsheet")
+        response.redirect("/proof/create/upload-spreadsheet")
     } else {
-        response.redirect("/uni/fill-in-proof-details")
+        response.redirect("/proof/create/fill-in-proof-details")
     }
 })
