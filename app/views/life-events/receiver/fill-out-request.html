@@ -105,44 +105,37 @@
             },
             {
               value: "d",
-              text: "Child's address"
+              text: "Child's post address"
             },
             {
               value: "e",
-              text: "Child's sex"
+              text: "Child's school"
             },
             {
-              value: "c",
-              text: "Does the child have an Educational Health Care Plan (EHCP)?"
+              value: "f",
+              text: "How a child's disability affects their disability"
             },
             {
-              value: "c",
-              text: "Child's mobility needs"
+              value: "g",
+              text: "Parent or guardan's name"
             },
             {
-              value: "c",
-              text: "Parent/Guardian's name"
+              value: "h",
+              text: "Parent or guardan's email address"
             },
             {
-              value: "c",
-              text: "Parent/Guardian's address"
-            },
-            {
-              value: "c",
-              text: "Parent/Guardian's phone number"
-            },
-            {
-              value: "c",
-              text: "Parent/Guardian's relationship to child"
+              value: "i",
+              text: "Parent or guardan's phone number"
             }
           ]
         }) }}
+
 
         {{ govukCheckboxes({
           name: "fields",
           fieldset: {
             legend: {
-              text: "Why do you need this data?",
+              text: "What purpose do you want data for?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
@@ -153,27 +146,19 @@
           items: [
             {
               value: "a",
-              text: "To offer free bus and rail passes"
+              text: "Transport and mobility services "
             },
             {
               value: "b",
-              text: "To offer subsidised travel"
+              text: "Financial support to families"
             },
             {
-              value: "b",
-              text: "To offer a Blue Badge"
+              value: "c",
+              text: "Housing services for families "
             },
             {
-              value: "b",
-              text: "To offer a sensory support service"
-            },
-            {
-              value: "b",
-              text: "To offer a Max Card"
-            },
-            {
-              value: "b",
-              text: "To offer a further information and advice service"
+              value: "d",
+              text: "Other purpose"
             }
           ]
         }) }}
