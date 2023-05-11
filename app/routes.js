@@ -17,3 +17,14 @@ router.post('/proof/create/fill-in-proof-details', function(request, response) {
         response.redirect("/proof/create/fill-in-proof-details")
     }
 })
+
+
+router.post('/proof/check/enter-proof-id', function(request, response) {
+
+    var inputtype = request.session.data['inputtype']
+    if (inputtype == "spreadsheet"){
+        response.redirect("/proof/check/upload-spreadsheet")
+    } else {
+        response.redirect("/proof/check/enter-proof-id")
+    }
+})

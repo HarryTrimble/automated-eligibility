@@ -36,7 +36,7 @@
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/proof/create/fill-in-proof-details" method="post">
+      <form class="form" action="/proof/check/enter-proof-id" method="post">
 
         {{ govukRadios({
           name: "inputtype",
@@ -51,11 +51,11 @@
           items: [
             {
               value: "form",
-              text: "Enter or scan a code"
+              text: "Enter or scan a code - one at a time"
             },
             {
               value: "spreadsheet",
-              text: "Upload a spreadsheet"
+              text: "Upload a spreadsheet - more than one"
             }
           ]
         }) }}

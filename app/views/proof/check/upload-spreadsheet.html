@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check proof - GOV.UK Proof
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p style="margin-bottom: 0px;"><span class="govuk-!-font-weight-bold">University of Arnsford</span>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="/proof/create/home-page">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Generate proof</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Templates</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Check proof</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Settings</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">API integration</a>
+        </li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <span class="govuk-caption-l">Check proof</span>
+      <h1 class="govuk-heading-l">Upload proof details</h1>
+
+
+      <div class="govuk-form-group" style="border: 2px dashed #0b0c0c  ; padding: 20px 20px 20px 20px;">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+      <form action="#" method="post" novalidate>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+      <h2 class="govuk-heading-m">Your file needs to look like this example</h2>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Full name</th>
+          <th scope="col" class="govuk-table__header">Proof ID</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Henrik Colleymore</th>
+          <td class="govuk-table__cell">hdj2123f82</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Ruth Sidemeade</th>
+          <td class="govuk-table__cell">jdh2345k32</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Ahmed Kilar</th>
+          <td class="govuk-table__cell">lx2324hj97</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <p class="govuk-body"><a href="#">Download template</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
