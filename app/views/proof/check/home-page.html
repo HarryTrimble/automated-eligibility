@@ -19,7 +19,7 @@
           <a class="govuk-link govuk-!-font-weight-bold" href="#">Dashboard</a>
         </li>
         <li>
-          <a class="govuk-link" href="#">Generate proof</a>
+          <a class="govuk-link" href="#">Issue proof</a>
         </li>
         <li>
           <a class="govuk-link" href="#">Templates</a>
@@ -35,27 +35,76 @@
         </li>
       </ul>
     </div>
+    <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-m">Credentials</h3>
+    </div>
     <div class="govuk-grid-column-one-quarter">
       <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #1d70b8;">
         <p style="margin-bottom: 0px; color: white;">
-          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">23743</span><br>
-          <a href="#" class="govuk-link" style="color: white;">Active proofs</a></p>
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">79,696</span><br>
+          <a href="#" class="govuk-link" style="color: white;">Active credentials</a></p>
       </div>
     </div>
     <div class="govuk-grid-column-one-quarter">
       <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #505a5f;">
         <p style="margin-bottom: 0px; color: white;">
-          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">61394</span><br>
-          <a href="#" class="govuk-link" style="color: white;">Expired proofs</a></p>
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">13,133</span><br>
+          <a href="#" class="govuk-link" style="color: white;">Expired credentials</a></p>
       </div>
     </div>
     <div class="govuk-grid-column-one-quarter">
       <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px;">
         <p style="margin-bottom: 0px; color: white;">
-          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">109402</span><br>
-          <a href="#" class="govuk-link" style="color: white;">Proofs checked</a></p>
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">194,234</span><br>
+          <a href="#" class="govuk-link" style="color: white;">Credentials checked</a></p>
       </div>
     </div>
   </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <p></p>
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <hr>
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Templates</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Issued</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Checked</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="#">Council tax letter</a></th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">87,312</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">104,812</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/life-events/sender/child-disability-living-allowance">Edit</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="#">Scaffolding licence</a></th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">4212</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">1932</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/life-events/sender/child-disability-living-allowance">Edit</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="#">Certificate of Care</a></th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">261</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">983</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/life-events/sender/child-disability-living-allowance">Edit</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="#">Taxi licence </a></th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">1044</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">18,212</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/life-events/sender/child-disability-living-allowance">Edit</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 
 {% endblock %}

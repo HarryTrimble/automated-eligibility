@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Generate proof - GOV.UK Proof
+  Issue proof - GOV.UK Proof
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,7 +19,7 @@
           <a class="govuk-link" href="/proof/create/home-page">Dashboard</a>
         </li>
         <li>
-          <a class="govuk-link govuk-!-font-weight-bold" href="#">Generate proof</a>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Issue proof</a>
         </li>
         <li>
           <a class="govuk-link" href="#">Templates</a>
@@ -36,7 +36,7 @@
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">Generate proof</span>
+      <span class="govuk-caption-l">Issue proof</span>
       <h1 class="govuk-heading-l">Check information before generating proof about your user</h1>
       <h2 class="govuk-heading-m">Certificate of Registration</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -127,12 +127,12 @@
           </dd>
         </div>
       </dl>
-      <h2 class="govuk-heading-m">Now generate proof</h2>
+      <h2 class="govuk-heading-m">Now Issue proof</h2>
       <p class="govuk-body">By submitting this information you are confirming that, to the best of your knowledge, the proof you are providing is correct.</p>
       <form action="/proof/create/proof-confirmation" method="post" novalidate>
         <input type="hidden" name="answers-checked" value="true">
         <button class="govuk-button" data-module="govuk-button">
-          Generate proof
+          Issue proof
         </button>
       </form>
     </div>
